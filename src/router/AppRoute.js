@@ -1,6 +1,6 @@
 import React from 'react';
-// import { HashRouter  as Router, Route, Redirect, NotFoundRoute } from "react-router-dom";
-import { BrowserRouter  as Router, Route, Redirect, NotFoundRoute } from "react-router-dom";
+import { HashRouter  as Router, Route, Redirect, NotFoundRoute } from "react-router-dom";
+// import { BrowserRouter  as Router, Route, Redirect, NotFoundRoute } from "react-router-dom";
 
 import Login from "../view/Login"; //登入
 import Test from "../view/Test"; //登入

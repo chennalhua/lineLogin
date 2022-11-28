@@ -65,7 +65,7 @@ const Login = () => {
                         });
                         document.cookie = `lineIdToken=${decodedIdToken.sub};`;
                         const cookieId = document.cookie.replace(/(?:(?:^|.*;\s*)cookieId\s*=\s*([^;]*).*$)|^.*$/, '$1');
-                        setTimeout(() => { window.location.href = `/#/page?id=${cookieId}` }, 1000);
+                        setTimeout(() => { window.location.href = `https://chennalhua.github.io/lineLogin/#/page?id=${cookieId}` }, 1000);
                     } catch (err) {
                         // If token is invalid.
                         console.log(err);

@@ -10,7 +10,7 @@ const ConferenceRegistration = () => {
         [isLoading, setIsLoading] = useState(true)
 
     let caseList = [
-        { id: '001', name: '新年快樂' }
+        { id: '001', name: '學長~ 新年快樂' }
     ]
     useEffect(() => {
         //抓課程 id

@@ -53,7 +53,7 @@ const ConferenceRegistration = () => {
     }
     return (
         <>
-            <Loading isLoading={true} />
+            <Loading isLoading={isLoading} />
             <div style={{ style }}>
                 <p>{window.location.href}</p>
                 <ul style={{ fontSize: '18px' }}>

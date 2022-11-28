@@ -23,7 +23,7 @@ const ConferenceRegistration = () => {
         //抓 line id
         if (lineId === '' || lineId === null || lineId === undefined) {
             setTimeout(() => {
-                window.location.href = '/'
+                window.location.href = 'https://chennalhua.github.io/lineLogin/#/'
             }, 3000)
             return
         } else if (caseId == null || caseId == 'null' || caseId == '' || caseId == undefined) {

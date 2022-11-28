@@ -4,11 +4,13 @@ import { HashRouter  as Router, Route, Redirect, NotFoundRoute } from "react-rou
 
 import Login from "../view/Login"; //登入
 import Test from "../view/Test"; //登入
+import Page from "../view/Page"
 
 const AppRoute = (props) => {
     return (
         <Router>
             <Route exact path="/"><Login /></Route> {/* 登入 */}
+            <Route exact path="/page"><Page /></Route> {/* 登入 */}
             <Route exact path="/qqq"><Test /></Route> {/* 登入 */}
         </Router>
     )

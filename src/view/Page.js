@@ -23,7 +23,7 @@ const ConferenceRegistration = () => {
         //抓 line id
         if (lineId === '' || lineId === null || lineId === undefined) {
             setTimeout(() => {
-                window.location.href = '/login'
+                window.location.href = '/'
             }, 3000)
             return
         } else if (caseId == null || caseId == 'null' || caseId == '' || caseId == undefined) {

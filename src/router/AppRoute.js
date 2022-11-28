@@ -11,7 +11,6 @@ const AppRoute = (props) => {
         <Router>
             <Route exact path="/"><Login /></Route> {/* 登入 */}
             <Route exact path="/page"><Page /></Route> {/* 登入 */}
-            <Route exact path="/qqq"><Test /></Route> {/* 登入 */}
         </Router>
     )
 }

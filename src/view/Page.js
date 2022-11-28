@@ -6,7 +6,8 @@ const ConferenceRegistration = () => {
     const lineId = document.cookie.replace(/(?:(?:^|.*;\s*)lineIdToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
     const cookieId = document.cookie.replace(/(?:(?:^|.*;\s*)cookieId\s*=\s*([^;]*).*$)|^.*$/, '$1');
     let [caseData, setCaseData] = useState({ name: null, id: null }),
-        [state, setState] = useState(null) //狀態(接 API Response data)
+        [state, setState] = useState(null), //狀態(接 API Response data)
+        [isLoading, setIsLoading] = useState(true)
 
     let caseList = [
         { id: '001', name: '新年快樂' }
@@ -24,12 +25,15 @@ const ConferenceRegistration = () => {
         if (lineId === '' || lineId === null || lineId === undefined) {
             setTimeout(() => {
                 window.location.href = 'https://chennalhua.github.io/lineLogin/#/'
+                // window.location.href = 'https://localhost:3000/'
             }, 3000)
             return
         } else if (caseId == null || caseId == 'null' || caseId == '' || caseId == undefined) {
+            setIsLoading(false)
             setState('抓 ID 錯誤 !!')
             return
         } else {
+            setIsLoading(false)
             caseList.map((item, index) => {
                 if (cookieId == item.id) {
                     setCaseData({ name: item.name, id: item.id })
@@ -49,6 +53,7 @@ const ConferenceRegistration = () => {
     }
     return (
         <>
+            <Loading isLoading={true} />
             <div style={{ style }}>
                 <p>{window.location.href}</p>
                 <ul style={{ fontSize: '18px' }}>

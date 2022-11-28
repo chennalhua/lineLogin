@@ -1,12 +1,28 @@
-const Loading = (props) => {
+const Loading = ({ isLoading }) => {
+    let style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)'
+    }
+
+    let bgStyle = {
+        background: 'rgba(0,0,0,.2)',
+        width: '100vw',
+        height: '100vh',
+        position: 'absolute',
+        top: '0',
+        left: '0'
+    }
     return (
         <>
-            <div className={`loading-wrapper position-fixed ${props.isLoading === true ? 'd-block' : 'd-none'}`} style={{ zIndex: '2000', top: '0' }}>
-                <div className="loading d-flex flex-column align-items-center">
-                    <div className={`spinner-border text-golden-brown spinner-border--width ${props.circleHide ? 'visually-hidden' : ''}`} role="status">
-                        <span className="visually-hidden">Loading...</span>
+            <div className={`${isLoading ? 'd-block' : 'd-none'}`}>
+                <div style={bgStyle}>
+                    <div style={style}>
+                        <div className="load-4">
+                            <div className="ring-1"></div>
+                        </div>
                     </div>
-                    {props.children}
                 </div>
             </div>
         </>

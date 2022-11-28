@@ -5,6 +5,7 @@ import axios from 'axios';
 import url from 'url';
 import qs from 'qs';
 import jwt from 'jsonwebtoken';
+import Loading from './Loading';
 
 const Login = () => {
     const state = randomBytes(32).toString('hex');
@@ -82,9 +83,12 @@ const Login = () => {
         getAccessToken(window.location.href)
     }, []);
     return (
-        <div>
-            頁面導回中...
-        </div>
+        <>
+            <Loading isLoading={true} />
+            <div>
+                頁面導回中...
+            </div>
+        </>
     );
 };
 
